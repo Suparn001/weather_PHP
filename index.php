@@ -6,7 +6,7 @@ $api = 'your api key';
 
 if (isset($_POST['submit'])) {
     $city = $_POST['city'];
-    $url = "http://api.openweathermap.org/data/2.5/weather?q=$city&appid=$api";
+    $url = "api_url";
     
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
