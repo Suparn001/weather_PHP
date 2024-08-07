@@ -2,7 +2,7 @@
 $status = "";
 $msg = "";
 $city = "";
-$api = '2b4a3fa21dac206097794bd0ada66a47';
+$api = 'your api key';
 
 if (isset($_POST['submit'])) {
     $city = $_POST['city'];
@@ -80,19 +80,31 @@ if (isset($_POST['submit'])) {
         .alert {
             border-radius: 25px;
         }
+        .info-div {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #007bff;
+            border-radius: 10px;
+            background-color: #e9f7ff;
+        }
+        .info-div.show {
+            display: block;
+        }
     </style>
 </head>
 <body>
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-8">
+                
                 <form method="post" class="mb-4">
-                    <h2 class="text-center mb-4">Check the Weather</h2>
+                    <h2 class="text-center mb-4"><u>Check the Weather</u></h2>
                     <div class="form-group">
                         <input type="text" class="form-control form-control-lg" placeholder="Enter city name" name="city" value="<?php echo htmlspecialchars($city) ?>">
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-custom btn-lg w-100" name="submit">Get Weather</button>
+                    <button type="submit" class="btn btn-custom btn-lg w-100" name="submit">Click to Get Weather Details</button>
                     <?php if ($msg) { ?>
                         <div class="alert alert-danger mt-3"><?php echo ($msg) ?></div>
                     <?php } ?>
